@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Do Zero ao Deploy Front-end ESSENCIAL</title>
+        <script src="assets/js/script.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
         <style>
             a[href^="#"][name]::before {
@@ -25,7 +26,7 @@
             <h3 class="mb-3 text-center">Do Zero ao Deploy Front-end ESSENCIAL</h3>
             <div class="row">
                 <div class="col-12 mb-4">
-                    <ul>
+                    <ul data-type="topic-menu-container">
                         <li><a href="#HTML-I">HTML I</a></li>
                         <li><a href="#CSS-I">CSS I</a></li>
                         <li><a href="#JS-I">JS I</a></li>
@@ -33,314 +34,116 @@
                 </div>
                 <div class="col-md-8 col-sm-12 mb-3">
                     <h4>Tópicos</h4>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item mb-3">
-                            <h5 class="pt-2 mb-0">
-                                <a href="#HTML-I" name="HTML-I">HTML I</a>
-                            </h5>
+                    <ul class="list-group list-group-flush" data-type="topic-container">
+                        <!--
+                            <li class="list-group-item mb-3">
+                                <h5 class="pt-2 mb-0">
+                                    <a href="#JS-I" name="JS-I">JS I</a>
+                                </h5>
 
-                            <ul class="list-group list-group-flush px-4">
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
+                                <ul class="list-group list-group-flush px-4">
+                                    <li class="list-group-item mb-3">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <h5 class="pt-2 mb-0">Aula 01</h5>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Vídeo</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
+                                    </li>
+                                    <li class="list-group-item mb-3">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <h5 class="pt-2 mb-0">Aula 01</h5>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Vídeo</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
+                                    </li>
+                                    <li class="list-group-item mb-3">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <h5 class="pt-2 mb-0">Aula 01</h5>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Vídeo</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
+                                    </li>
+                                    <li class="list-group-item mb-3">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <h5 class="pt-2 mb-0">Aula 01</h5>
+                                            </div>
+                                            <div class="col">
+                                                <div class="d-flex justify-content-between">
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Código</a>
+                                                    </div>
+                                                    <div class="btn btn-link">
+                                                        <a href="#!">Vídeo</a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="list-group-item mb-3">
-                            <h5 class="pt-2 mb-0">
-                                <a href="#CSS-I" name="CSS-I">CSS I</a>
-                            </h5>
-
-                            <ul class="list-group list-group-flush px-4">
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="list-group-item mb-3">
-                            <h5 class="pt-2 mb-0">
-                                <a href="#JS-I" name="JS-I">JS I</a>
-                            </h5>
-
-                            <ul class="list-group list-group-flush px-4">
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="list-group-item mb-3">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <h5 class="pt-2 mb-0">Aula 01</h5>
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Código</a>
-                                                </div>
-                                                <div class="btn btn-link">
-                                                    <a href="#!">Vídeo</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
+                                    </li>
+                                </ul>
+                            </li>
+                        -->
                     </ul>
                 </div>
                 <div class="col-md-4 col-sm-12 mb-3">
                     <h4>Tools</h4>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item mb-3">
-                            <a href="./00-tools/ver-console-na-pagina.html">Ver console na pagina</a>
+                            <a href="00-tools/ver-console-na-pagina.html">Ver console na pagina</a>
                         </li>
                     </ul>
                 </div>

@@ -1,0 +1,28 @@
+{
+    "topics": [
+        {
+            "title": "HTML I",
+            "description": "",
+            "id": "HTML-I-topics",
+            "items": [
+                {
+                    "title": "01 - Variaveis",
+                    "links": [
+                        {
+                            "label": "Variaveis",
+                            "href": "01-basico-I/01-variaveis.html",
+                            "target": "_self",
+                            "class": ""
+                        },
+                        {
+                            "label": "Variaveis (explicada)",
+                            "href": "01-basico-I/01-variaveis-explicada.html",
+                            "target": "_self",
+                            "class": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
