@@ -8,13 +8,64 @@
 </head>
 <body>
     <script>
+        function pulaLinha(quantidade = 1) {
+            console.log('\n'.repeat(quantidade))
+        }
+
+        function textoColorido(message, style = null) {
+            style = style ?? 'background: #222; color: #bada55';
+            console.log(`%c ${message}`, style);
+        }
+
         var dataDeNascimento = 1986
         var anoAtual = 2022
         var idade = anoAtual - dataDeNascimento
 
-        console.log(dataDeNascimento)
-        console.log(anoAtual)
-        console.log(idade)
+        console.log('dataDeNascimento:', dataDeNascimento)
+        console.log('anoAtual:', anoAtual)
+        console.log('idade:', idade)
+
+        var saldo = 5000
+        var divida = 800
+        console.log('saldo:', saldo)
+        console.log('divida:', divida)
+        var saldo = saldo - divida
+        console.log('Saldo após "saldo - divida":', saldo)
+
+        pulaLinha(1)
+
+        var mensagem = 'Agora vamos ver os valores como "string". Quando utilizamos aspas'
+        textoColorido(mensagem)
+
+        var saldo = 5000
+        var salario = '4800'
+        console.log('saldo:', saldo)
+        console.log('salario:', salario)
+        var saldo = saldo + salario
+        console.log('Saldo após "saldo + salario":', saldo)
+
+        pulaLinha(1)
+
+        textoColorido('Ficou estranho né? Não somou. Apenas "juntou" os valores. \n')
+        textoColorido('O nome disso é CONCATENAÇÃO. \n')
+        textoColorido('Isso ocorre porque a variável "salario" é uma "string". \n')
+        textoColorido('Vamos ver de que tipo de dados é a variável "salario"?\n')
+        textoColorido('Para isso, basta executar: typeof salario\n')
+
+        console.log('Atualmente "salario" é do tipo: ', typeof salario, '\n')
+
+        textoColorido('Para mudar um número de "string" para "number", use o parseFloat(salario) ou parseInt(salario) \n')
+
+        var saldo = 5000 //aqui apenas voltamos aos valores originais
+        var salario = '4800'
+
+        var salario = parseFloat(salario)
+        console.log('Agora "salario" é do tipo: ', typeof salario, '\n')
+
+        textoColorido('Tudo certo, podemos fazer nossos cálculos normalmente agora...\n')
+
+        var saldo = saldo + salario
+        console.log('Saldo após "saldo + salario":', saldo)
     </script>
 </body>
 </html>
