@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console na Página</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <style>
+        body, * { margin: 0; padding: 0; color: LinkText;}
+        .margin-all {margin: 5pt;}
+        #logger { background: #333; margin: 0; padding: 7pt; min-height: 80vh;}
+        #loggerContainer {max-height: 90vh; overflow-y: scroll; margin-bottom: 1vh;}
+        .log-boolean,
+        .log-undefined {color: magenta;}
+        .log-object,
+        .log-string {color: orange;}
+        .log-number {color: cyan;}
+        .container { margin: 0 5%;}
+    </style>
+    <script>
+        // Não altere esse primeiro script
+        // Veja o conteúdo a partir do próximo
+        (function () {
+            if (!console.old) {
+                console.old = console.log;
+            }
+
+            console.log = function () {
+                var output = "", arg, i;
+
+                for (i = 0; i < arguments.length; i++) {
+                    arg = arguments[i];
+                    output += "<span class=\"log-" + (typeof arg) + "\">";
+
+                    if (
+                        typeof arg === "object" &&
+                        typeof JSON === "object" &&
+                        typeof JSON.stringify === "function"
+                    ) {
+                        output += JSON.stringify(arg);
+                    } else {
+                        let ignoreThisStrings = [
+                            '\n',
+                        ];
+                        output += arg;
+                    }
+
+                    output += "</span>&nbsp;";
+                }
+
+                console.old.apply(undefined, arguments);
+
+                var logger = document.querySelector('#logger')
+
+                if (!logger) {
+                    return;
+                }
+
+                logger.innerHTML += output + "<br>";
+                logger.scrollIntoView(false);
+            };
+        })();
+
+        function limparConsole() {
+            var logger = document.querySelector('#logger')
+
+            if (!logger) {
+                return;
+            }
+
+            logger.innerHTML = ''
+            console.clear();
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="m-3">
+            <h3><a href="../index.html">Lista de páginas</a></h3>
+
+            <div class="m-3">
+                <h4>Console output on page</h4>
+                <strong>Veja mais detalhes no console do navegador.</strong>
+            </div>
+
+            <div class="m-3">
+                <button onclick="limparConsole()" class="btn btn-info">Limpar console</button>
+            </div>
+        </div>
+        <div id="loggerContainer">
+            <pre id="logger"></pre>
+        </div>
+    </div>
+
+    <script>
+        console.log('Resultado da soma 5 + 5:', 5 + 5)
+    </script>
+</body>
+</html>

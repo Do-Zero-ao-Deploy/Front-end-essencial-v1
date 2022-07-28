@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 01 - Variáveis</title>
+    <style>
+        body, * { margin: 0; padding: 0;}
+        .margin-all {margin: 5pt;}
+        #logger { background: #333; margin: 0; padding: 7pt; min-height: 80vh;}
+        #loggerContainer {max-height: 90vh; overflow-y: scroll;}
+        .log-boolean,
+        .log-undefined {color: magenta;}
+        .log-object,
+        .log-string {color: orange;}
+        .log-number {color: cyan;}
+        .container { margin: 0 5%;}
+    </style>
+    <script>
+        // Não altere esse primeiro script
+        // Veja o conteúdo a partir do próximo
+        (function () {
+            if (!console.old) {
+                console.old = console.log;
+            }
+
+            console.log = function () {
+                var output = "", arg, i;
+
+                for (i = 0; i < arguments.length; i++) {
+                    arg = arguments[i];
+                    output += "<span class=\"log-" + (typeof arg) + "\">";
+
+                    if (
+                        typeof arg === "object" &&
+                        typeof JSON === "object" &&
+                        typeof JSON.stringify === "function"
+                    ) {
+                        output += JSON.stringify(arg);
+                    } else {
+                        let ignoreThisStrings = [
+                            '\n',
+                        ];
+                        output += arg;
+                    }
+
+                    output += "</span>&nbsp;";
+                }
+
+                console.old.apply(undefined, arguments);
+
+                var logger = document.querySelector('#logger')
+
+                if (!logger) {
+                    return;
+                }
+
+                logger.innerHTML += output + "<br>";
+                logger.scrollIntoView(false);
+            };
+        })();
+
+        function limparConsole() {
+            var logger = document.querySelector('#logger')
+
+            if (!logger) {
+                return;
+            }
+
+            logger.innerHTML = ''
+            console.clear();
+        }
+    </script>
+</head>
+<body>
+
+    <div class="container">
+        <div class="margin-all">
+            <h3><a href="./01-variaveis.html">Versão simples</a></h3>
+            <strong>Veja mais detalhes no console do navegador.</strong>
+
+            <div class="margin-all">
+                <button onclick="limparConsole()">Limpar console</button>
+            </div>
+        </div>
+        <div id="loggerContainer">
+            <pre id="logger"></pre>
+        </div>
+    </div>
+
+    <script>
+        function pulaLinha(quantidade = 1) {
+            console.log('\n'.repeat(quantidade))
+        }
+
+        var dataDeNascimento = 1986
+        var anoAtual = 2022
+        var idade = anoAtual - dataDeNascimento
+
+        console.log('dataDeNascimento:', dataDeNascimento)
+        console.log('anoAtual:', anoAtual)
+        console.log('idade:', idade)
+
+        var saldo = 5000
+        var divida = 800
+        console.log('saldo:', saldo)
+        console.log('divida:', divida)
+        var saldo = saldo - divida
+        console.log('Saldo após "saldo - divida":', saldo)
+
+        pulaLinha(1)
+
+        var mensagem = 'Agora vamos ver os valores como "string". Quando utilizamos aspas'
+        console.log(mensagem)
+
+        var saldo = 5000
+        var salario = '4800'
+        console.log('saldo:', saldo)
+        console.log('salario:', salario)
+        var saldo = saldo + salario
+        console.log('Saldo após "saldo + salario":', saldo)
+
+        pulaLinha(1)
+
+        console.log('Ficou estranho né? Não somou. Apenas "juntou" os valores. \n')
+        console.log('O nome disso é CONCATENAÇÃO. \n')
+        console.log('Isso ocorre porque a variável "salario" é uma "string". \n')
+        console.log('Vamos ver de que tipo de dados é a variável "salario"?\n')
+        console.log('Para isso, basta executar: typeof salario\n')
+
+        console.log('Atualmente "salario" é do tipo: ', typeof salario, '\n')
+
+        console.log('Para mudar um número de "string" para "number", use o parseFloat(salario) ou parseInt(salario) \n')
+
+        var saldo = 5000 //aqui apenas voltamos aos valores originais
+        var salario = '4800'
+
+        var salario = parseFloat(salario)
+        console.log('Agora "salario" é do tipo: ', typeof salario, '\n')
+
+        console.log('Tudo certo, podemos fazer nossos cálculos normalmente agora...\n')
+
+        var saldo = saldo + salario
+        console.log('Saldo após "saldo + salario":', saldo)
+    </script>
+</body>
+</html>
